@@ -1,0 +1,25 @@
+<h1>New Run</h1>
+<form>
+  <ul class="run-list">
+    <li class="run-list__item">
+      {{input type="text" placeholder="Run Time" value=time}}
+    </li>
+    <li class="run-list__item">
+      {{input type="text" placeholder="Race Date" value=date}}
+    </li>
+    <li class="run-list__item">
+      {{input type="text" placeholder="Race Notes" value=notes}}
+    </li>
+  </ul>
+</form>
+
+<div class="footer__new">
+  <div class="footer-space">
+    {{#link-to "index"}}
+    <button class="footer-button__cancel">CANCEL</button>
+    {{/link-to}}
+  </div>
+  <div class="footer-button">
+    <button class="footer-button__cancel footer-button__submit">SUBMIT</button>
+  </div>
+</div>

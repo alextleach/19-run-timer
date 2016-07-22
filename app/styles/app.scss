@@ -16,6 +16,10 @@ $gutter: 0.6rem;
     list-style: none;
     padding-left: 0;
   }
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: normal;
+    color: $White;
+  }
 }
 
 body {
@@ -46,9 +50,6 @@ body {
 .top-nav {
   background: $Header;
   color: $White;
-  h2 {
-    font-weight: normal;
-  }
 }
 
 .fa-circle {
@@ -57,6 +58,11 @@ body {
 }
 .fa-plus {
   color: #fff;
+  // width:100%;
+	// padding-top:60%;
+  //   padding-bottom:50%;
+	// line-height:1em;
+	// margin-top:-0.5em;
 }
 
 .run-list {
@@ -66,6 +72,7 @@ body {
     justify-content: space-between;
     font-size: 1.3rem;
     padding: $gutter 0;
+    margin: $gutter 0;
     border-bottom: 0.1rem solid $Placeholder;
     &__date {
       color: $Regular;
@@ -73,11 +80,60 @@ body {
     &__time {
       color: $Green;
     }
+    input {
+      background: transparent;
+      width: 100%;
+      border: none;
+      padding: $gutter/2;
+      font-size: 1rem;
+      color: $White;
+    }
   }
 }
 
 footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: $gutter;
   position: absolute;
   bottom: 0;
   right: 0;
+}
+.footer__new {
+  padding: $gutter*2 $gutter;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  width: 100%;
+}
+.footer-space {
+  align-self: flex-start;
+  flex-grow: 1;
+}
+.footer-button {
+  align-self: flex-end;
+  &__cancel{
+    font-size: 0.8rem;
+    background: $ButtonGrey;
+    padding: $gutter/1.5 $gutter*1.5;
+    border: none;
+    border-radius: 0.1rem;
+  }
+  &__submit {
+    background: $Green;
+  }
+}
+
+.add-run__button {
+  background: $Green;
+  border: none;
+  text-align: center;
+  vertical-align: middle;
+  padding-bottom: 100%;
+  border-radius: 50%;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+
 }

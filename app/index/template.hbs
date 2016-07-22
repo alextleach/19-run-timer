@@ -11,8 +11,19 @@
 
 
 <footer>
+
+  {{!-- <div class="add-run__button">
+    {{fa-icon "plus" size=3}}
+  </div> --}}
+  <div class="footer-space">
+  {{!-- space! --}}
+  </div>
+  <div class="footer-button">
+  {{#link-to "new"}}
   {{#fa-stack size=2 as |s|}}
   {{s.stack-2x "circle"}}
   {{s.stack-1x "plus"}}
 {{/fa-stack}}
+{{/link-to}}
+</div>
 </footer>
