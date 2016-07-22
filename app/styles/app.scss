@@ -1,0 +1,83 @@
+
+$background: #282828;
+$ButtonGrey: #ddd;
+$ButtonGreen: #80cbc4;
+$Header: #00bbd3;
+$White: #fff;
+$Regular: rgba(255, 255, 255, 0.6);
+$Placeholder: rgba(255, 255, 255, 0.4);
+$Green: #92cbc5;
+$ButtonTextGrey: #1c1c1c;
+$gutter: 0.6rem;
+
+* {
+  box-sizing: border-box;
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+}
+
+body {
+  background: $background;
+  margin: 0;
+  color: $Regular;
+  font-family: 'Roboto', sans-serif;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  &__main{
+    flex-grow: 1;
+  }
+}
+
+.width-container {
+  max-width: 30rem;
+  margin: 0 auto;
+  padding: 0 $gutter;
+  &__main {
+    position: relative;
+    min-height: 80vh;
+  }
+}
+
+.top-nav {
+  background: $Header;
+  color: $White;
+  h2 {
+    font-weight: normal;
+  }
+}
+
+.fa-circle {
+  color: $ButtonGreen;
+  text-shadow: 0.1rem 0.2rem 0.2rem rgba(#000,.79);
+}
+.fa-plus {
+  color: #fff;
+}
+
+.run-list {
+  width: 100%;
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem;
+    padding: $gutter 0;
+    border-bottom: 0.1rem solid $Placeholder;
+    &__date {
+      color: $Regular;
+    }
+    &__time {
+      color: $Green;
+    }
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
