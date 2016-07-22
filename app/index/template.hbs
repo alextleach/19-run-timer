@@ -1,12 +1,14 @@
 <ul class="run-list">
+  {{#each model as |run|}}
   <li class="run-list__item">
     <span class="run-list__item__date">
-      Dec 1, 2015
+      {{run.date}}
     </span>
     <span class="run-list__item__time">
-      00:23:15
+      {{run.time}}
     </span>
   </li>
+  {{/each}}
 </ul>
 
 
