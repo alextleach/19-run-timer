@@ -1,0 +1,32 @@
+<h1>My Run</h1>
+<ul class="run-list">
+  <li class="run-list__item run-list__item__details">
+    <span class="run-list__item__date">
+      {{model.date}}
+    </span>
+    <span class="run-list__item__time">
+      {{model.time}}
+    </span>
+  </li>
+</ul>
+
+<div class="run-details">
+  <p>{{model.notes}}</p>
+</div>
+
+<footer>
+  <div class="footer-space">
+    {{#link-to "index"}}
+    {{#fa-stack size=2 as |s|}}
+    {{s.stack-2x "circle" class="fa-circle__gray"}}
+    {{s.stack-1x "angle-left"}}
+    {{/fa-stack}}
+    {{/link-to}}
+  </div>
+  <div class="footer-button">
+    {{#fa-stack size=2 as |s|}}
+    {{s.stack-2x "circle"}}
+    {{s.stack-1x "pencil"}}
+    {{/fa-stack}}
+  </div>
+</footer>
