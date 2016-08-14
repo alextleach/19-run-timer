@@ -23,6 +23,28 @@ $gutter: 0.6rem;
   }
   a {
   text-decoration: none;
+  color: inherit;
+  }
+  button {
+    outline: none;
+    background: inherit;
+    border: inherit;
+    color: inherit;
+    font-size: inherit;
+  }
+  input {
+    outline: none;
+    background: transparent;
+    width: 100%;
+    border: none;
+    padding: $gutter/2;
+    font-size: 1rem;
+    color: $White;
+    &:focus {
+      background: rgba(#b1b1b1,.41);
+      color: $Header;
+      transition: background 100ms ease-in, color 350ms linear;
+    }
   }
 }
 
@@ -62,14 +84,13 @@ body {
   &__gray{
     color: $ButtonGrey;
   }
+  &__check{
+    color: $Header;
+  }
 }
 .fa-plus {
   color: #fff;
-  // width:100%;
-	// padding-top:60%;
-  //   padding-bottom:50%;
-	// line-height:1em;
-	// margin-top:-0.5em;
+
 }
 
 .fa-angle-left {
@@ -91,14 +112,7 @@ body {
     &__time {
       color: $Green;
     }
-    input {
-      background: transparent;
-      width: 100%;
-      border: none;
-      padding: $gutter/2;
-      font-size: 1rem;
-      color: $White;
-    }
+
     &__details{
       border-bottom: none;
       font-size: 1.2rem;
@@ -133,19 +147,23 @@ footer {
 .footer-space {
   text-align: left;
   align-self: flex-start;
-  flex-grow: 1;
+  // flex-grow: 1;
 }
 .footer-button {
   align-self: flex-end;
+  cursor: pointer;
   &__cancel{
+    color: $background;
     font-size: 0.8rem;
     background: $ButtonGrey;
     padding: $gutter/1.5 $gutter*1.5;
     border: none;
     border-radius: 0.1rem;
+
   }
   &__submit {
     background: $Green;
+    cursor: pointer;
   }
 }
 

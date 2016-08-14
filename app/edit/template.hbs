@@ -1,0 +1,36 @@
+{{outlet}}
+<h2>Editing {{model.date}}</h2>
+<form {{ action "edit" model._id on="submit"}}>
+<div class="run-list__container">
+<ul class="run-list">
+  <li class="run-list__item run-list__item__details">
+    <span class="run-list__item run-list__item__date">
+{{input type="text" placeholder=model.date value=model.date}}
+    </span>
+    <span class="run-list__item run-list__item__time">
+      {{input type="text" placeholder=model.time value=model.time}}
+    </span>
+  </li>
+</ul>
+
+<div class="run-list__item">
+  {{input type="text" placeholder=model.notes value=model.notes}}
+</div>
+</div>
+<footer>
+  <div class="footer-space">
+    {{#link-to "index"}}
+    {{#fa-stack size=2 as |s|}}
+    {{s.stack-2x "circle" class="fa-circle__gray"}}
+    {{s.stack-1x "angle-left"}}
+    {{/fa-stack}}
+    {{/link-to}}
+  </div>
+  <button type="submit" class="footer-button">
+    {{#fa-stack size=2 as |s|}}
+    {{s.stack-2x "circle" class="fa-circle__check"}}
+    {{s.stack-1x "check"}}
+    {{/fa-stack}}
+  </button>
+</footer>
+</form>

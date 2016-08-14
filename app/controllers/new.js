@@ -7,7 +7,7 @@ export default Ember.Controller.extend({
         time: this.time || '',
         date: this.date || '',
         notes: this.notes || '',
-      }
+      };
       fetch('http://tiny-tn.herokuapp.com/collections/runs-al', {
         method: 'post',
         body: JSON.stringify(newRun),
